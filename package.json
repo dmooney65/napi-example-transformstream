@@ -1,0 +1,18 @@
+{
+    "name": "napi-example-transformstream",
+    "version": "1.0.0",
+    "description": "Simple transform stream implementation using node-addon-api",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "install": "cmake-js compile",
+        "build:dev": "cmake-js compile --debug",
+        "build": "cmake-js compile",
+        "clean": "cmake-js clean"
+    },
+    "dependencies": {
+        "bindings": "^1.3.0",
+        "cmake-js": "^3.7.3",
+        "node-addon-api": "^1.4.0"
+    }
+}
