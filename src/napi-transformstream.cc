@@ -1,8 +1,3 @@
-#include <chrono>
-#include <thread>
-#include <iostream>
-#include <math.h>
-
 #include "napi-transformstream.h"
 
 Napi::FunctionReference TransformStream::constructor;
@@ -33,7 +28,7 @@ TransformStream::TransformStream(const Napi::CallbackInfo &info)
     Napi::Object props = info.This().As<Napi::Object>();
     for (int i = 0; i < len; i++)
     {
-        // Iterate constructor properties and pass to instance
+        // Iterate constructor properties and pass to instance method(s)
         napi_value e;
         napi_get_element(env, propNames, i, &e);
         std::string key = Napi::String(env, e).Utf8Value();
