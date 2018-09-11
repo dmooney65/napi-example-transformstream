@@ -3,11 +3,22 @@
     "version": "1.0.0",
     "description": "Simple transform stream implementation using node-addon-api",
     "main": "index.js",
+    "keywords": [
+        "node-addon-api",
+        "native-module",
+        "addon-development",
+        "napi",
+        "n-api",
+        "native",
+        "addon"
+    ],
     "scripts": {
         "start": "node index.js",
         "install": "cmake-js compile",
-        "build:dev": "cmake-js compile --debug",
-        "build": "cmake-js compile",
+        "build:dev": "cmake-js build --debug",
+        "build": "cmake-js build",
+        "rebuild:dev": "cmake-js rebuild --debug",
+        "rebuild": "cmake-js rebuild",
         "clean": "cmake-js clean"
     },
     "dependencies": {
