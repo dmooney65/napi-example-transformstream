@@ -48,7 +48,7 @@ Napi::Value TransformStream::Transform(const Napi::CallbackInfo &info)
 
     // Get property passed from constructor
     Napi::Object props = info.This().As<Napi::Object>();
-    uint option1 = props.Get("optionNum").As<Napi::Number>().Uint32Value();
+    unsigned int option1 = props.Get("optionNum").As<Napi::Number>().Uint32Value();
 
     // Do stuff with inputBuffer
 
