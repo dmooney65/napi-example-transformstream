@@ -51,7 +51,12 @@ Napi::Value TransformStream::Transform(const Napi::CallbackInfo &info)
     unsigned int option1 = props.Get("optionNum").As<Napi::Number>().Uint32Value();
 
     // Do stuff with inputBuffer
+    char* in = (char*)inputBuffer;
+    char* output = new char[lengthIn];
+    for(int i=0; i < lengthIn; i++){
+        output[i] = in[i];
+    }
 
     // Return buffer
-    return Napi::Buffer<char>::New(env, (char *)inputBuffer, lengthIn);
+    return Napi::Buffer<char>::New(env, output, lengthIn);
 }
